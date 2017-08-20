@@ -2,15 +2,12 @@
 # docker run -d --name sentiments-line-chart -p 5002:8080 sentiments-line-chart
 FROM node:6.10-alpine
 LABEL maintainer="Eugen Soloviov"
-COPY src /app/src
-COPY config /app/config
-COPY index.html /app/index.html
-COPY package.json /app/package.json
-COPY build /app/build
-WORKDIR /app
+COPY app /app
+COPY master /app/master
+COPY register.json /app/register.json
+WORKDIR /master/master
 RUN npm install
-CMD ["node","build/build.js"]
-WORKDIR /app/public
-COPY app /app/public
+RUN node build/build.js
+WORKDIR /master
 RUN npm install
 CMD ["node","index.js"]
