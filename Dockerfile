@@ -12,4 +12,5 @@ RUN npm install
 CMD ["node","build/build.js"]
 WORKDIR /app/public
 COPY app /app/public
+RUN npm install
 CMD ["node","index.js"]
