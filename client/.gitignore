@@ -1,8 +1,9 @@
+static/data/
 yarn.lock
 .DS_Store
 node_modules/
-client/dist/
-client/public/
+dist/
+public/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

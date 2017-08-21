@@ -1,6 +1,8 @@
+node_modules/
+client/node_modules/
+server/node_modules/
 yarn.lock
 .DS_Store
-node_modules/
 client/dist/
 client/public/
 npm-debug.log*

@@ -5,7 +5,7 @@ const app = express();
 
 const reginfo = require('./register.json');
 
-app.use(express.static(path.join(__dirname, 'master/public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(process.env.WEBPORT, () => console.log('Application started'));
 
