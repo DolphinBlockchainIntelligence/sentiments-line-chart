@@ -1,7 +1,7 @@
 <template>
   <div id="sentiments-line-chart">
     <div v-if="!chartError">
-      <div :id="'sentimentsLineChart'+id" style="min-width: 100%; width: 100%; height: 400px; margin: 0 auto"></div>
+      <div :id="'sentimentsLineChart'+id" style="min-width: 100%; width: 100%; height: 100vh; min-height: 100vh; margin: 0 auto"></div>
     </div>
   </div>
 </template>
@@ -31,13 +31,13 @@ export default {
       function createChart () {
         Highstock.stockChart(highchartContainer, {
           chart: {
-            spacingBottom: 60
+            spacingBottom: 30
           },
           legend: {
             enabled: true,
             floating: true,
             verticalAlign: 'bottom',
-            align:'right',
+            align:'center',
             y: 30
           },
           rangeSelector: {
@@ -98,6 +98,12 @@ export default {
 }
 </script>
 
+<style lang="sass">
+html
+  overflow-x: hidden !important
+body
+  margin: 0
+</style>
 
 <style lang="sass" scoped>
 .title
